@@ -1,0 +1,9 @@
+numpy==1.18.1
+tensorflow==1.4.1
+scipy==1.0.0
+scikit-learn==0.19.1
+matplotlib==2.1.1
+xlrd==1.1.0
+ipdb==0.10.3
+Pillow==5.0.0
+lxml==4.1.1
