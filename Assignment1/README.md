@@ -1,17 +1,15 @@
 # Assignment 1. Handwritten Digit Recognition using TensorFlow and MNIST dataset
 
 ### Learning Goal:
-
-How to prepare image data for training?
-batching
-How to use a high-level framework (TensorFlow) to create a neural model?
-simple logistic regression
-fully-connected and convolution layers
-stacking layers
-How to train the model?
-typical training loop
-model evaluation
-
+How to prepare image data for training?  
+batching  
+How to use a high-level framework (TensorFlow) to create a neural model?  
+simple logistic regression  
+fully-connected and convolution layers  
+stacking layers  
+How to train the model?  
+typical training loop  
+model evaluation 
 
 ### Platform: TensorFlow
 
@@ -50,7 +48,8 @@ In digital circuits, one-hot refers to a group of bits among which the legal com
 
 In this case, one-hot encoding means that if the output of the image is the digit 7, then the output will be encoded as a vector of 10 elements with all elements being 0, except for the element at index 7 which is 1.
 
-<b> input_data.read_data_sets('data/mnist', one_hot=True) <b/>
+<b> input_data.read_data_sets('data/mnist', one_hot=True) </b>     
+
 
 Above statement returns an instance of learn.datasets.base.Datasets, which contains three generators to 55,000 data points of training data (mnist.train), 10,000 points of test data (mnist.test), and 5,000 points of validation data (mnist.validation). You get the samples of these datasets by calling next_batch(batch_size), for example, mnist.train.next_batch(batch_size) with a batch_size of your choice.
 
@@ -82,13 +81,9 @@ The next step is to create an iterator to get samples from the two datasets. In 
 
 ```
 iterator = tf.data.Iterator.from_structure(train_data.output_types, 
-
                                            train_data.output_shapes)
-
 img, label = iterator.get_next()
-
 train_init = iterator.make_initializer(train_data) # initializer for train_data
-
 test_init  = iterator.make_initializer(test_data) # initializer for test_data
 
  ...
@@ -98,31 +93,19 @@ with tf.Session() as sess:
     ...
 
     for i in range(n_epochs):       # train the model n_epochs times
-
         sess.run(train_init)        # drawing samples from train_data
-
         try:
-
             while True:
-
                 _, l = sess.run([optimizer, loss])
-
         except tf.errors.OutOfRangeError:
-
             pass
 
     # test the model
-
     sess.run(test_init) # drawing samples from test_data
-
     try:
-
         while True:
-
             sess.run(accuracy)
-
     except tf.errors.OutOfRangeError:
-
         pass
 ```
 

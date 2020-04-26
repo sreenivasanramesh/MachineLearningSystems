@@ -1,7 +1,7 @@
 # Data Intensive Systems for Machine Learning Assignment Solutions
 This repo contains my solutions for the assignments for my Machine Learning Systems class at ASU. 
 
-- [ ] Assignment 1: Handwritten Digit Recognition using TensorFlow and MNIST dataset 
+- [x] Assignment 1: Handwritten Digit Recognition using TensorFlow and MNIST dataset 
 
 - [ ] Assignment 2: Reading Assignment for Machine Learning Systems Comparison
 

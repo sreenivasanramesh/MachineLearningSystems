@@ -17,7 +17,7 @@ import utils
 
 # Define paramaters for the model
 learning_rate = 0.01
-batch_size = 128
+batch_size = 4
 n_epochs = 30
 n_train = 60000
 n_test = 10000
@@ -25,10 +25,12 @@ n_test = 10000
 # Step 1: Read in data
 mnist_folder = 'data/mnist'
 if os.path.isdir(mnist_folder) != True:
-    os.mkdir(data)
+    os.mkdir('data')
     os.mkdir(mnist_folder)
 utils.download_mnist(mnist_folder)
+print(mnist_folder)
 train, val, test = utils.read_mnist(mnist_folder, flatten=True)
+
 
 # Step 2: Create datasets and iterator
 # create training Dataset and batch it
@@ -41,6 +43,9 @@ test_data = None
 #############################
 ########## TO DO ############
 #############################
+test_data = tf.data.Dataset.from_tensor_slices(test)
+test_data = test_data.batch(batch_size)
+
 
 
 # create one iterator and initialize it with different datasets
@@ -61,6 +66,9 @@ w, b = None, None
 ########## TO DO ############
 #############################
 
+w = tf.get_variable(name='weight_1', shape=(784, 10), initializer=tf.contrib.layers.xavier_initializer())
+b = tf.get_variable(name='bias_1', shape=(1, 10), initializer=tf.zeros_initializer())
+
 
 # Step 4: build model
 # the model that returns the logits.
@@ -70,6 +78,9 @@ logits = None
 ########## TO DO ############
 #############################
 
+logits = tf.matmul(img, w) + b
+
+
 
 # Step 5: define loss function
 # use cross entropy of softmax of logits as the loss function
@@ -78,6 +89,11 @@ loss = None
 ########## TO DO ############
 #############################
 
+entropy = tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=label, name='entropy')
+loss = tf.reduce_mean(entropy, name='loss')
+
+
+
 
 # Step 6: define optimizer
 # using Adamn Optimizer with pre-defined learning rate to minimize loss
@@ -85,6 +101,9 @@ optimizer = None
 #############################
 ########## TO DO ############
 #############################
+
+optimizer = tf.contrib.opt.NadamOptimizer(learning_rate).minimize(loss)
+#optimizer = tf.train.AdamOptimizer(learning_rate).minimize(loss)
 
 
 # Step 7: calculate accuracy with test set
