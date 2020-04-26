@@ -3,7 +3,7 @@ This repo contains my solutions for the assignments for my Machine Learning Syst
 
 - [x] Assignment 1: Handwritten Digit Recognition using TensorFlow and MNIST dataset 
 
-- [ ] Assignment 2: Reading Assignment for Machine Learning Systems Comparison
+- [x] Assignment 2: Reading Assignment for Machine Learning Systems Comparison
 
 - [ ] Assignment 3: Reverse-Mode Automatic Differentiation
 
