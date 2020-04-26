@@ -5,7 +5,7 @@ This repo contains my solutions for the assignments for my Machine Learning Syst
 
 - [x] Assignment 2: Reading Assignment for Machine Learning Systems Comparison
 
-- [ ] Assignment 3: Reverse-Mode Automatic Differentiation
+- [x] Assignment 3: Reverse-Mode Automatic Differentiation
 
 - [ ] Assignment 4: Reading Assignment for Deep Learning Compilation/Optimization Stack
 

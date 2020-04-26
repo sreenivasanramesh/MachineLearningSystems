@@ -174,7 +174,7 @@ def test_matmul_two_vars():
     y = ad.matmul_op(x2, x3)
 
     grad_x2, grad_x3 = ad.gradients(y, [x2, x3])
-    print grad_x3
+    print (grad_x3)
     executor = ad.Executor([y, grad_x2, grad_x3])
     x2_val = np.array([[1, 2], [3, 4], [5, 6]]) # 3x2
     x3_val = np.array([[7, 8, 9], [10, 11, 12]]) # 2x3
