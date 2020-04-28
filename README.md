@@ -7,7 +7,7 @@ This repo contains my solutions for the assignments for my Machine Learning Syst
 
 - [x] Assignment 3: Reverse-Mode Automatic Differentiation
 
-- [ ] Assignment 4: Reading Assignment for Deep Learning Compilation/Optimization Stack
+- [x] Assignment 4: Reading Assignment for Deep Learning Compilation/Optimization Stack
 
 - [ ] Assignment 5: GPU Graph Executor (Optional/Bonus)
 
