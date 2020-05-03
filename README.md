@@ -15,4 +15,4 @@ This repo contains my solutions for the assignments for my Machine Learning Syst
 
 - [x] Assignment 7: Reading Assignment for Machine Learning on Relational Database
 
-- [ ] Assignment 8: Dense Matrix Multiplication Comparison: Handcoded, Breeze, Spark
+- [x] Assignment 8: Dense Matrix Multiplication Comparison: Handcoded, Breeze, Spark

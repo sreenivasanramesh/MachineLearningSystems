@@ -36,3 +36,12 @@ time of running N times is around 3 minutes. On my platform, N is chosen as 100.
 - In the report,  measured time for the three implementations are listed and compared in a way that is easy to understand: 4pt
 - In the report, observations and things learnt from the implementation and performance comparison are summarized: 4pt
 
+
+---
+
+### To run Solution
+1. scala MatrixMultiple.scala
+2. sbt run
+3. sbt run
+    - If you want to  create a fat jar and play with it, run sbt assembly
+    - the fat jar will be created in the target folder
