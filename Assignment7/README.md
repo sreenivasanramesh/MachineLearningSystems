@@ -7,7 +7,7 @@
 
 
 ### Tasks:
-1. Select two papers from the list of papers for Assignment 7
+1. Select three papers from the list of papers for Assignment 7
 2. Write three 1-page reviews, one review for each paper:
     - Each review must include three parts: 
     - Summary of the paper
