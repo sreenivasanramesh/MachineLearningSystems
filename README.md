@@ -9,7 +9,7 @@ This repo contains my solutions for the assignments for my Machine Learning Syst
 
 - [x] Assignment 4: Reading Assignment for Deep Learning Compilation/Optimization Stack
 
-- [ ] Assignment 5: GPU Graph Executor (Optional/Bonus)
+- [x] Assignment 5: GPU Graph Executor (Optional/Bonus)
 
 - [ ] Assignment 6: PipeDream/GPipe Bonus Reading Assignment
 
