@@ -13,6 +13,6 @@ This repo contains my solutions for the assignments for my Machine Learning Syst
 
 - [ ] Assignment 6: PipeDream/GPipe Bonus Reading Assignment
 
-- [ ] Assignment 7: Reading Assignment for Machine Learning on Relational Database
+- [x] Assignment 7: Reading Assignment for Machine Learning on Relational Database
 
 - [ ] Assignment 8: Dense Matrix Multiplication Comparison: Handcoded, Breeze, Spark
